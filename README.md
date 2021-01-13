@@ -1,5 +1,5 @@
 # Recognize 2000+ faces with your Jetson Nano.
-![output image]( https://qengineering.eu/images/John Cleese.jpg )
+![output image]( https://qengineering.eu/images/John_Cleese.png )
 
 ## A fast face recognition and face recording running on a Jetson Nano.
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)<br/>
