@@ -16,7 +16,7 @@ Special made for a Jetson Nano see [Q-engineering deep learning examples](https:
 
 ------------
 
-### Benchmark.
+## Benchmark.
 | Model  | Jetson Nano 2015 MHz | Jetson Nano 1479 MHz | RPi 4 64-OS 1950 MHz | RPi 4 64-OS 1500 MHz |
 | ------------- | :------------: | :-------------: | :-------------:  | :-------------: |
 | MTCNN  | 11 mS | 14 mS  | 22 mS | 25 mS  |
@@ -55,7 +55,7 @@ Norton_2.mp4 (movie to check)<br/>
 
 ------------
 
-### Running the app.
+## Running the app.
 To run the application load the project file FaceRecognition.cbp in Code::Blocks.<br/> 
 First, we are going to fill the database with new faces. The database *img*  initial holds one face, Graham.jpg.<br/><br/>
 ![output image]( https://qengineering.eu/images/Strangers1.png )<br/><br/>
@@ -69,7 +69,7 @@ Compile and run the application again. You will see that all the faces are corre
 
 ------------
 
-### Database.
+## Database.
 The application can easily contain more than 2000 faces. There are reports that ArcFace works flawlessly with over 5000 faces. With large databases, it is important to keep your face "natural". It means a front view photo with eyes open and mouth closed without a smile or other funny faces.<br/>
 The database is filled "on the fly", as you have seen above. It is also possible to manually add a face to the databases. To do this, run the application from the command-line and enter the name of the image as an argument. For example `./FaceRecognition "Graham Norton.jpg"` Note the quotation marks around the name if it has a space.
 
@@ -83,7 +83,7 @@ Another safety measure is the orientation of the face. Only faces in front of th
 
 ------------
 
-### Code.
+## Code.
 The application is written in C ++. The setup is flexible and easy to adapt to your own needs. See it as a skeleton which you can expand yourself. Some hints.
 In main .cpp at line 21 you see a few defines.
 ```
@@ -104,15 +104,15 @@ If you have a large input format, you could extract the faces at a larger scale 
 ------------
 
 
-### RaspiCam.
+## WebCam.
 If you want to use a camera please alter line 253 in main.cpp to<br/>
-`cv::VideoCapture cap(0);                          //RaspiCam`<br/>
+`cv::VideoCapture cap(0);                          //WebCam`<br/>
 If you want to run a movie please alter line 253 in main.cpp to<br/>
-`cv::VideoCapture cap("Norton_A.mp4");   //Movie`<br/>
+`cv::VideoCapture cap("Norton_2.mp4");   //Movie`<br/>
 
 ------------
 
-### Papers.
+## Papers.
 [MTCNN](https://arxiv.org/ftp/arxiv/papers/1604/1604.02878.pdf)<br/>
 [RetinaFace](https://arxiv.org/pdf/1905.00641.pdf)<br/>
 [ArcFace](https://arxiv.org/pdf/1801.07698.pdf)<br/>
@@ -120,7 +120,7 @@ If you want to run a movie please alter line 253 in main.cpp to<br/>
 
 ------------
 
-#### Thanks.
+### Thanks.
 https://github.com/Tencent/ncnn<br/>
 https://github.com/nihui<br/>
 https://github.com/LicheeX/MTCNN-NCNN<br/>
