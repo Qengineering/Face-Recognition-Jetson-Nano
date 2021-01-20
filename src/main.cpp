@@ -20,7 +20,7 @@
 //----------------------------------------------------------------------------------------
 #define RETINA                  //comment if you want to use MtCNN landmark detection instead
 #define RECOGNIZE_FACE
-//#define TEST_LIVING
+#define TEST_LIVING
 #define AUTO_FILL_DATABASE
 #define BLUR_FILTER_STRANGER
 // some diagnostics
