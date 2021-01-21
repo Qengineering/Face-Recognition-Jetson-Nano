@@ -385,7 +385,7 @@ int main(int argc, char **argv)
         cv::putText(frame, cv::format("FPS %0.2f", f/16),cv::Point(10,20),cv::FONT_HERSHEY_SIMPLEX,0.6, cv::Scalar(180, 180, 0));
 
         //show output
-        cv::imshow("RPi 64 OS - 1,95 GHz - 2 Mb RAM", frame);
+        cv::imshow("Jetson Nano - 2014.5 MHz", frame);
         char esc = cv::waitKey(5);
         if(esc == 27) break;
     }
