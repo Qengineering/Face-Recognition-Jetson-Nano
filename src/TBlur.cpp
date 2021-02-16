@@ -80,7 +80,7 @@ double TBlur::Execute(cv::Mat &frame)
 
     //img_fft = 20*numpy.log(numpy.abs(img_fft))
     Mat logFFT;
-    cv::abs(invFFT);
+    invFFT = cv::abs(invFFT);
     cv::log(invFFT,logFFT);
     logFFT *= 20;
 
