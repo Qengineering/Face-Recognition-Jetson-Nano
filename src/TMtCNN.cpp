@@ -15,10 +15,13 @@ bool cmpArea(Bbox lsh, Bbox rsh) {
 //----------------------------------------------------------------------------------------
 TMtCNN::TMtCNN(void)
 {
+    Pnet.opt.use_vulkan_compute = true;
     Pnet.load_param("./models/mtcnn/det1.param");
     Pnet.load_model("./models/mtcnn/det1.bin");
+    Rnet.opt.use_vulkan_compute = true;
     Rnet.load_param("./models/mtcnn/det2.param");
     Rnet.load_model("./models/mtcnn/det2.bin");
+    Onet.opt.use_vulkan_compute = true;
     Onet.load_param("./models/mtcnn/det3.param");
     Onet.load_model("./models/mtcnn/det3.bin");
 }
