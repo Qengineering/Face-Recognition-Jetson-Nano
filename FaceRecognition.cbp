@@ -31,15 +31,13 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-Wall" />
-			<Add option="-Wno-unknown-pragmas" />
 			<Add option="-D__ANDROID__" />
 			<Add option="-D__ARM_NEON" />
-			<Add option="-isystem" />
 			<Add option="-DNDEBUG" />
+			<Add option="-Wall" />
+			<Add option="-Wno-unknown-pragmas" />
+			<Add option="-isystem" />
 			<Add option="-fPIE" />
-			<Add option="-fno-rtti" />
-			<Add option="-fno-exceptions" />
 			<Add option="-fopenmp" />
 			<Add option="-pthread" />
 			<Add directory="/usr/include/opencv4" />
