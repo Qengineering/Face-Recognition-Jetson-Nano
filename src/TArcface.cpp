@@ -8,6 +8,7 @@
 //----------------------------------------------------------------------------------------
 TArcFace::TArcFace(void)
 {
+    net.opt.use_vulkan_compute = true;
     net.load_param("./models/mobilefacenet/mobilefacenet.param");
     net.load_model("./models/mobilefacenet/mobilefacenet.bin");
 }
