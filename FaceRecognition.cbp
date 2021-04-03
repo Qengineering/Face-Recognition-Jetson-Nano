@@ -31,26 +31,38 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-O3" />
 			<Add option="-Wall" />
-			<Add option="-fexceptions" />
 			<Add option="-Wno-unknown-pragmas" />
+			<Add option="-D__ANDROID__" />
+			<Add option="-D__ARM_NEON" />
+			<Add option="-isystem" />
+			<Add option="-DNDEBUG" />
+			<Add option="-fPIE" />
+			<Add option="-fno-rtti" />
+			<Add option="-fno-exceptions" />
+			<Add option="-fopenmp" />
+			<Add option="-pthread" />
 			<Add directory="/usr/include/opencv4" />
 			<Add directory="/usr/local/include/ncnn" />
 		</Compiler>
 		<Linker>
+			<Add option="-O3" />
 			<Add option="-fopenmp" />
 			<Add option="`pkg-config --libs --cflags opencv4`" />
 			<Add option="-ldl" />
 			<Add option="-lpthread" />
+			<Add option="-pthread" />
+			<Add option="-lgomp" />
+			<Add option="-DNDEBUG" />
+			<Add option="-rdynamic" />
 			<Add library="/usr/local/lib/ncnn/libncnn.a" />
-			<Add library="/usr/lib/aarch64-linux-gnu/libvulkan.so" />
 			<Add library="/usr/local/lib/ncnn/libglslang.a" />
+			<Add library="/usr/local/lib/ncnn/libSPIRV.a" />
+			<Add library="/usr/local/lib/ncnn/libMachineIndependent.a" />
 			<Add library="/usr/local/lib/ncnn/libOGLCompiler.a" />
 			<Add library="/usr/local/lib/ncnn/libOSDependent.a" />
-			<Add library="/usr/local/lib/ncnn/libSPIRV.a" />
-			<Add directory="/usr/local/lib/" />
-			<Add directory="/usr/lib/" />
+			<Add library="/usr/local/lib/ncnn/libGenericCodeGen.a" />
+			<Add library="/usr/lib/aarch64-linux-gnu/libvulkan.so" />
 		</Linker>
 		<Unit filename="include/TArcface.h" />
 		<Unit filename="include/TBlur.h" />
