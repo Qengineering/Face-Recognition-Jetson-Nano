@@ -154,7 +154,7 @@ int main(int argc, char **argv)
     TWarp Warp;
     TMtCNN MtCNN;
     TArcFace ArcFace;
-    TRetina Rtn(RetinaWidth, RetinaHeight, false);     //no Vulkan support on a RPi
+    TRetina Rtn(RetinaWidth, RetinaHeight, true);     //have Vulkan support on a Jetson Nano
     TBlur Blur;
     //some timing
     chrono::steady_clock::time_point Tbegin, Tend;
