@@ -39,7 +39,7 @@ To run the application, you have to:
 To extract and run the application in Code::Blocks <br/>
 $ mkdir *MyDir* <br/>
 $ cd *MyDir* <br/>
-$ wget https://github.com/Qengineering/Face-Recognition-Jetson-Nano/archive/refs/heads/master.zip <br/>
+$ wget https://github.com/Qengineering/Face-Recognition-Jetson-Nano/archive/refs/heads/main.zip <br/>
 $ unzip -j master.zip <br/>
 Remove master.zip and README.md as they are no longer needed. <br/> 
 $ rm master.zip <br/>
