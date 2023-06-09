@@ -41,7 +41,7 @@ const double MaxAngle        = 10.0;
 const int   RetinaWidth      = 320;
 const int   RetinaHeight     = 240;
 float ScaleX, ScaleY;
-vector<cv::String> NameFaces;
+vector<std::string> NameFaces;
 //----------------------------------------------------------------------------------------
 using namespace std;
 using namespace cv;
@@ -91,7 +91,7 @@ void DrawObjects(cv::Mat &frame, vector<FaceObject> &Faces)
         cv::putText(frame, cv::format("Name prob : %0.4f", obj.NameProb),cv::Point(10,80),cv::FONT_HERSHEY_SIMPLEX,0.6, cv::Scalar(180, 180, 0));
 #ifdef TEST_LIVING
         if(obj.Color==2){
-            //face is too tiny 
+            //face is too tiny
             cv::putText(frame, cv::format("Live prob : ??"),cv::Point(10,100),cv::FONT_HERSHEY_SIMPLEX,0.6, cv::Scalar(180, 180, 0));
         }
         else{
@@ -102,7 +102,7 @@ void DrawObjects(cv::Mat &frame, vector<FaceObject> &Faces)
 #endif // SHOW_LEGEND
 //----- labels ----------------------------
 #ifdef RECOGNIZE_FACE
-        cv::String Str;
+        std::string Str;
         cv::Scalar color;
         int  baseLine = 0;
 
@@ -147,7 +147,7 @@ int main(int argc, char **argv)
     std::vector<FaceObject> Faces;
     vector<cv::Mat> fc1;
     string pattern_jpg = "./img/*.jpg";
-    cv::String NewItemName;
+    std::string NewItemName;
     size_t FaceCnt;
     //the networks
     TLive Live;
@@ -218,7 +218,7 @@ int main(int argc, char **argv)
                 //get centre aligned image
                 cv::Mat aligned = Warp.Process(result_cnn,Faces[0]);
 
-                cv::String Str = imagepath;
+                std::string Str = imagepath;
                 n   = Str.rfind('/');
                 Str = Str.erase(0,n+1);
                 Str = Str.erase(Str.length()-4, Str.length()-1);  //remove .jpg
@@ -245,7 +245,7 @@ int main(int argc, char **argv)
             faces = cv::imread(NameFaces[i]);
             fc1.push_back(ArcFace.GetFeature(faces));
             //get a proper name
-            cv::String &Str = NameFaces[i];
+            std::string &Str = NameFaces[i];
             n   = Str.rfind('/');
             Str = Str.erase(0,n+1);
             n   = Str.find('#');
